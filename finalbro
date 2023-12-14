@@ -1,2 +1,168 @@
-how are you 
-hii
+/TO CLONE THE FILE FROM GITHUB TO VSCODE
+
+
+vinothsanjay707@penguin:~/git$ git clone https://github.com/SanjayKumarR7/my1stwebsite.git
+Cloning into 'my1stwebsite'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+//MOVE TO THE CORRECT DESTINATION 
+
+vinothsanjay707@penguin:~/git$ cd my1stwebsite
+
+//TO CHECK THE STATUS OF THE FILE 
+
+
+vinothsanjay707@penguin:~/git/my1stwebsite$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        check2.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+//IF FILE IS UNTRACKED THEN IT WILL BE ADDED BY THIS 
+
+vinothsanjay707@penguin:~/git/my1stwebsite$ git add check2.html
+vinothsanjay707@penguin:~/git/my1stwebsite$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   check2.html
+
+// TO COMMIT THE FILE FOR ADDED TO THE LOCAL FOLDER
+
+vinothsanjay707@penguin:~/git/my1stwebsite$git commit -m "check2.html is added"
+[main 1a9597c] check2.html is added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 check2.html
+
+//TO ADDED TO FILE TO THE GITHUB IN ONLINE 
+
+vinothsanjay707@penguin:~/git/my1stwebsite$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 285 bytes | 285.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/SanjayKumarR7/my1stwebsite.git
+   d9fe35e..1a9597c  main -> main
+
+
+//IN SIMPLE WORDS FOR CONNECT THE FILE FROM ONLINE TO THE LOCAL DISK 
+
+------INSERT -> ADD -> COMMIT -> PUSH 
+
+//NOW DO THIS AGAIN FOR PRACTICE
+
+
+vinothsanjay707@penguin:~/githubb prac/final.html$ git add final3.html
+vinothsanjay707@penguin:~/githubb prac/final.html$ git commit -m "final3.html added"
+[main f23919b] final3.html added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 final3.html
+vinothsanjay707@penguin:~/githubb prac/final.html$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+vinothsanjay707@penguin:~/githubb prac/final.html$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 279 bytes | 279.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/SanjayKumarR7/final.html.git
+   3664a68..f23919b  main -> main
+
+   //IF ANY CHANGES IN LOCAL FILE THEN IT WILL BE MODIFIED AND CHANGED IN WEBSITE BY
+
+vinothsanjay707@penguin:~/githubb prac/final.html$ git add final3.html
+vinothsanjay707@penguin:~/githubb prac/final.html$ git commit -m "Modified final3.html"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+vinothsanjay707@penguin:~/githubb prac/final.html$ git push origin main
+Everything up-to-date
+
+//TO DELETE A FILE IN A GIT BY USING ADD COMMAND FOR STAGING AREA TO DELETE 
+//FIRST WE NEED TO DELETE THE FROM LOCAL  THEN ADD , COMMIT AND PUSH WILL DELETED THE FILE IN GIT 
+
+vinothsanjay707@penguin:~/githubb prac/final.html$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    final3.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vinothsanjay707@penguin:~/githubb prac/final.html$ git add final3.html
+vinothsanjay707@penguin:~/githubb prac/final.html$ git commit -m "Deleted final3.html"
+[main 9316f03] Deleted final3.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 final3.html
+vinothsanjay707@penguin:~/githubb prac/final.html$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 236 bytes | 236.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/SanjayKumarR7/final.html.git
+   f23919b..9316f03  main -> main
+
+   // SHOW AND GET THE FILE FROM GIT TO LOCAL BY GIT PULL 
+
+
+vinothsanjay707@penguin:~/githubb prac/final.html$ git pull 
+
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 709 bytes | 39.00 KiB/s, done.
+From https://github.com/SanjayKumarR7/final.html
+   9316f03..760652e  main       -> origin/main
+Updating 9316f03..760652e
+Fast-forward
+ dummy.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 dummy.txt
+
+ //IF ANY FILE IS MODIFIED IN GIT THEN IT WILL BE MODIFIED IN LOCAL BY USING GIT PULL 
+
+vinothsanjay707@penguin:~/githubb prac/final.html$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 650 bytes | 130.00 KiB/s, done.
+From https://github.com/SanjayKumarR7/final.html
+   760652e..d3a1091  main       -> origin/main
+Updating 760652e..d3a1091
+Fast-forward
+ finalbro | 1 +
+ 1 file changed, 1 insertion(+)
+
+//IN SIMPLE WORDS FOR ANY MODIFICATION 
+
+ANY MODIFICATION -> ADD -> COMMIT -> PUSH 
+
+vinothsanjay707@penguin:~/githubb prac/final.html$ 
+
+//NOW COPY THE ENTIRE FILE FROM LOCAL TO GITHUB 
+//LIKE MY FIRST RESTAURANT WEBSITE  
